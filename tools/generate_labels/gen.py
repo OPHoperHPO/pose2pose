@@ -1,4 +1,4 @@
-# Pose2Pose dataset generator from videofile.
+# Pose2Pose video label generator from videofile.
 # Module version: 2.0.7 [Public][New]
 # Author: Anodev (https://github.com/OPHoperHPO)
 
@@ -33,7 +33,7 @@ def main(args):
             # Get label image
             label = detect('temp/' + args.temp_filename)
             # Save images
-            cv2.imwrite("pose2pose/test_label/{}.png".format(i), label)
+            cv2.imwrite("pose2pose/test_A/{}.png".format(i), label)
             cv2.imwrite("pose2pose/original/{}.png".format(i), frame_resized)
             # Remove temp file
             os.remove('temp/' + args.temp_filename)
