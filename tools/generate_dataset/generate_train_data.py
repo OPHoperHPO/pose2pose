@@ -33,8 +33,8 @@ def main(args):
             # Get label image
             label = detect('temp/' + args.temp_filename)
             # Save images
-            cv2.imwrite("dataset/train_A/{}.png".format(i), label)
-            cv2.imwrite("dataset/train_B/{}.png".format(i), frame_resized)
+            cv2.imwrite("pose2pose/train_A/{}.png".format(i), label)
+            cv2.imwrite("pose2pose/train_B/{}.png".format(i), frame_resized)
             # Remove temp file
             os.remove('temp/' + args.temp_filename)
         else:
@@ -66,11 +66,11 @@ if __name__ == '__main__':
         print('Please specify a video file with the argument "--file"')
         exit(1)
     # Create dirs if dirs don't exists
-    if not os.path.exists(os.path.join('./dataset', 'train_B')):
-        os.makedirs(os.path.join('./dataset', 'train_B'))
+    if not os.path.exists(os.path.join('./pose2pose', 'train_B')):
+        os.makedirs(os.path.join('./pose2pose', 'train_B'))
 
-    if not os.path.exists(os.path.join('./dataset', 'train_A')):
-        os.makedirs(os.path.join('./dataset', 'train_A'))
+    if not os.path.exists(os.path.join('./pose2pose', 'train_A')):
+        os.makedirs(os.path.join('./pose2pose', 'train_A'))
 
     if not os.path.exists(os.path.join('./', 'temp')):
         os.makedirs(os.path.join('./', 'temp'))
