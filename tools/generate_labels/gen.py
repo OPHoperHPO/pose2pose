@@ -66,8 +66,8 @@ if __name__ == '__main__':
         print('Please specify a video file with the argument "--file"')
         exit(1)
     # Create dirs if dirs don't exists
-    if not os.path.exists(os.path.join('./pose2pose', 'test_label')):
-        os.makedirs(os.path.join('./pose2pose', 'test_label'))
+    if not os.path.exists(os.path.join('./pose2pose', 'test_A')):
+        os.makedirs(os.path.join('./pose2pose', 'test_A'))
 
     if not os.path.exists(os.path.join('./pose2pose', 'original')):
         os.makedirs(os.path.join('./pose2pose', 'original'))
