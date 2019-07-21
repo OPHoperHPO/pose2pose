@@ -24,7 +24,7 @@ def main(args):
             # Get frame from video file
             ret, frame = video.read()
             # Resize frame for fast frame processing
-            frame_resized = cv2.resize(frame, (1024, 512), interpolation=cv2.INTER_CUBIC)
+            frame_resized = cv2.resize(frame, (2048, 1024), interpolation=cv2.INTER_CUBIC)
         except Exception as e:
             break
         # Write frame to the temp folder
