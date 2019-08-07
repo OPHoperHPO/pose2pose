@@ -23,8 +23,8 @@ def init():
     # Set OpenPose parameters
     params = dict()
     params["model_folder"] = OPENPOSE_ROOT + os.sep + "models" + os.sep
-    params["face"] = True
-    params["hand"] = True
+    params["face"] = False
+    params["hand"] = False
     params["disable_blending"] = True
     # Start OpenPose wrapper
     op_wrapper = op.WrapperPython()
